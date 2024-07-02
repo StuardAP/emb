@@ -1,0 +1,10 @@
+FROM ollama/ollama
+
+COPY ./download-model.sh /tmp/download-model.sh
+
+WORKDIR /tmp
+
+RUN chmod +x download-model.sh \
+    && ./download-model.sh
+
+EXPOSE 11434
