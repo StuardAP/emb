@@ -11,7 +11,7 @@ import (
 func main() {
 	app := fiber.New()
 
-	httpClient := http_client.NewHTTPClient("localhost:11434")
+	httpClient := http_client.NewHTTPClient("http://localhost:11434")
 	embedService := service.NewEmbedService(httpClient)
 	embedHandler := http.NewEmbedHandler(embedService)
 
